@@ -38,11 +38,11 @@ public class Email {
             boolean lower=false;        // for checking if it has lower character
             boolean digit=false;        // for checking if it has digit character
             boolean special=false;      //for checking if it has special character
-            boolean status=false;       // for checking if newpassword is correct password or not
+//            boolean status=false;       // for checking if newpassword is correct password or not
 
-            if(newPassword.length()>=8){
-                status=true;
-            }
+//            if(newPassword.length()>=8){
+//                status=true;
+//            }
             Pattern specailCharPatten = Pattern.compile("[^a-z0-9 ]", Pattern.CASE_INSENSITIVE);
             if(specailCharPatten.matcher(newPassword).find()){
                 special=true;
@@ -62,7 +62,7 @@ public class Email {
                 }
             }
 
-            if(upper || lower || digit || special || status){
+            if(upper || lower || digit || special){
                 this.password=newPassword;
             }
         }

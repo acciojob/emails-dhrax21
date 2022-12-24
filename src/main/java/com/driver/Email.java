@@ -62,7 +62,7 @@ public class Email {
                 }
             }
 
-            if(upper || lower || digit || special){
+            if(upper && lower && digit && special){
                 this.password=newPassword;
             }
         }
